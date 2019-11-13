@@ -5,5 +5,6 @@
     <string name="password">Jelszó</string>
     <string name="login">Bejelentkezés</string>
     <string name="registration">Regisztráció</string>
-    <string name="belepes">Belépés</string>>
+    <string name="belepes">Belépés</string>
+    <string name="login1">Login</string>
 </resources>
