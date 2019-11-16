@@ -7,4 +7,5 @@
     <string name="registration">Regisztráció</string>
     <string name="belepes">Belépés</string>
     <string name="login1">Login</string>
+    <string name="showpassword">Show Password</string>
 </resources>

@@ -4,21 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/ImageViewLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
         android:contentDescription="@string/logo"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.892"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/EditTextEmail"
@@ -37,12 +35,10 @@
         android:textColorHint="@color/white"
         android:textCursorDrawable="@color/white"
         android:textStyle="normal|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImageViewLogo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/ImageViewLogo" />
 
     <EditText
         android:id="@+id/EditTextPassword"
@@ -56,8 +52,8 @@
         android:backgroundTint="@color/white"
         android:ems="10"
         android:hint="@string/password"
-        android:textColor="@color/white"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         android:textColorHighlight="@color/white"
         android:textColorHint="@color/white"
         android:textColorLink="@color/white"
@@ -72,16 +68,16 @@
 
     <Button
         android:id="@+id/ButtonLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="185dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="105dp"
+        android:background="@drawable/roundedbutton"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/login"
-        android:textColor="@color/background"
+        android:textColor="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.311"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EditTextPassword" />
 
@@ -89,16 +85,15 @@
         android:id="@+id/TextViewRegistration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="193dp"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="141dp"
         android:layout_marginBottom="141dp"
         android:gravity="center"
         android:text="@string/registration"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ButtonLogin"
         app:layout_constraintVertical_bias="0.0" />
@@ -109,7 +104,7 @@
         android:layout_height="80dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="53dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="25dp"
         android:text="@string/belepes"
         android:textColor="@color/white"
