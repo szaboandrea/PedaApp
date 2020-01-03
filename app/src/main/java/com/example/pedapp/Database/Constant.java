@@ -27,5 +27,26 @@ public class Constant {
             + PROFILE_COLUMN_STATUS + " TEXT,"
             + PROFILE_COLUMN_PASSWORD + " TEXT );";
 
+    /**
+     * test table which contains 8 column
+     */
+    public static final String TEST_TABLE_NAME = "test";
+    public static final String TEST_COLUMN_ID = "id";
+    public static final String TEST_COLUMN_GROUPNAME = "groupname";
+    public static final String TEST_COLUMN_QUESTION = "question";
+    public static final String TEST_COLUMN_ANSWEAR1 = "answear1";
+    public static final String TEST_COLUMN_ANSWEAR2 = "answear2";
+    public static final String TEST_COLUMN_ANSWEAR3 = "answear3";
+    public static final String TEST_COLUMN_ANSWEAR4 = "answear4";
+    public static final String TEST_COLUMN_CORRECTANSWEAR = "correctanswear";
 
+    public static final String CREATE_TABLE_TEST = "CREATE TABLE "
+            + TEST_TABLE_NAME + "(" + TEST_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + TEST_COLUMN_GROUPNAME + " TEXT,"
+            + TEST_COLUMN_QUESTION + " TEXT,"
+            + TEST_COLUMN_ANSWEAR1 + " TEXT,"
+            + TEST_COLUMN_ANSWEAR2 + " TEXT,"
+            + TEST_COLUMN_ANSWEAR3 + " TEXT,"
+            + TEST_COLUMN_ANSWEAR4 + " TEXT,"
+            + TEST_COLUMN_CORRECTANSWEAR + " TEXT );";
 }

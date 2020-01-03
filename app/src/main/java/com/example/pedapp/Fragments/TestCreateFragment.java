@@ -18,5 +18,4 @@ public class TestCreateFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_test_create, container, false);
         return view;
     }
-
 }
