@@ -57,7 +57,7 @@ public class StudentHomepageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity.mFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainer, new LoginFragment(),null)
+                        .replace(R.id.fragmentContainer, new TeacherHomepageFragment(),null)
                         .commit();
             }
         });
