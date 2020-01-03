@@ -8,15 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.pedapp.Activity.MainActivity;
+import com.example.pedapp.Database.SQLiteProfile;
 import com.example.pedapp.R;
 
 public class LoginFragment extends Fragment {
 
     private Button buttonLogin;
     private TextView textViewRegistration;
+    private EditText editTextEmail, editTextPassword;
+    private String mEmail, mPassword;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,6 +31,8 @@ public class LoginFragment extends Fragment {
         enableBackArrow(false);
         buttonLogin = view.findViewById(R.id.ButtonLogin);
         textViewRegistration = view.findViewById(R.id.TextViewRegistration);
+        editTextEmail = view.findViewById(R.id.EditTextEmail);
+        editTextPassword = view.findViewById(R.id.EditTextPassword);
         login();
         registration();
         return view;
@@ -35,10 +42,31 @@ public class LoginFragment extends Fragment {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new StudentHomepageFragment(),null).commit();
+                mEmail = editTextEmail.getText().toString();
+                mPassword = editTextPassword.getText().toString();
+                if (checkFields(mEmail, mPassword)){
+                    entry(mEmail, mPassword);
+                }
             }
         });
     }
+
+    /**
+     * check if either field is empty, then send an error message to enter that field
+     * @param mEmail
+     * @param mPassword
+     */
+    public void entry(String mEmail, String mPassword){
+        SQLiteProfile database = new SQLiteProfile(getActivity());
+        if (mPassword.matches(database.getPassword(mEmail))){
+            database.getAllProfile();
+            MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new StudentHomepageFragment(),null).commit();
+        }
+        else{
+            Toast.makeText(getActivity(), "Password or email wrong", Toast.LENGTH_LONG).show();
+        }
+    }
+
     public void registration(){
         textViewRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +74,20 @@ public class LoginFragment extends Fragment {
                 MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new RegisterFragment(),null).commit();
             }
         });
+    }
+
+    public boolean checkFields(final String username, final String password){
+        if (username.isEmpty()){
+            editTextEmail.setError("Please enter your full name");
+            editTextEmail.requestFocus();
+            return false;
+        }
+        else if (password.isEmpty()) {
+            editTextPassword.setError("Please enter your password");
+            editTextPassword.requestFocus();
+            return false;
+        }
+        return true;
     }
 
     /**

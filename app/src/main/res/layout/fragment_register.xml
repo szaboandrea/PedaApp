@@ -8,7 +8,7 @@
     tools:context=".Fragments.RegisterFragment">
 
     <ImageView
-        android:id="@+id/ImageViewLogoRegister"
+        android:id="@+id/imageViewLogoRegister"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:contentDescription="@string/logo"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TextViewMotto"
+        android:id="@+id/textViewMottoRegister"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:text="@string/registration"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/EditTextNameRegister"
+        android:id="@+id/editTextNameRegister"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <EditText
-        android:id="@+id/EditTextEmailRegister"
+        android:id="@+id/editTextEmailRegister"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <EditText
-        android:id="@+id/EditTextPasswordRegister"
+        android:id="@+id/editTextPasswordRegister"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -97,7 +97,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <EditText
-        android:id="@+id/EditTextPasswordRegisterAgain"
+        android:id="@+id/editTextPasswordRegisterAgain"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
@@ -119,7 +119,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <Button
-        android:id="@+id/ButtonRegister"
+        android:id="@+id/buttonRegister"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/roundedbutton"

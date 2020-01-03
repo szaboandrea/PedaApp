@@ -14,7 +14,7 @@
         android:src="@drawable/logo"
         app:layout_constraintBottom_toTopOf="@+id/guideline18"
         app:layout_constraintEnd_toStartOf="@+id/guideline26"
-        app:layout_constraintStart_toEndOf="@+id/TextViewMotto"
+        app:layout_constraintStart_toEndOf="@+id/textViewMotto"
         app:layout_constraintTop_toTopOf="@+id/guideline17" />
 
     <EditText
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline21" />
 
     <TextView
-        android:id="@+id/TextViewMotto"
+        android:id="@+id/textViewMottoRegister"
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:text="@string/belepes"
