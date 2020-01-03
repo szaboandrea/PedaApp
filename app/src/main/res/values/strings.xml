@@ -3,6 +3,7 @@
     <string name="logo">Logo</string>
     <string name="email">E-mail cím</string>
     <string name="password">Jelszó</string>
+    <string name="passwordAgain">Jelszó újra</string>
     <string name="login">Bejelentkezés</string>
     <string name="registration">Regisztráció</string>
     <string name="belepes">Belépés</string>
@@ -24,4 +25,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nameRegister">Név</string>
+    <string name="teacher">Tanár</string>
+    <string name="student">Diák</string>
+
 </resources>
