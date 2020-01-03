@@ -14,9 +14,7 @@ import android.widget.Spinner;
 import com.example.pedapp.Activity.MainActivity;
 import com.example.pedapp.R;
 
-
 public class StudentHomepageFragment extends Fragment {
-
     private Button buttonLogOut, buttonResult;
 
     @Override
@@ -29,7 +27,6 @@ public class StudentHomepageFragment extends Fragment {
         buttonResult = view.findViewById(R.id.ButtonResults);
         logout();
         results();
-
         Spinner spinnerTest = view.findViewById(R.id.SpinnerStudent);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),R.array.testLists,R.layout.student_homepage_spinner);
         adapter.setDropDownViewResource(R.layout.student_homepage_spinner);
