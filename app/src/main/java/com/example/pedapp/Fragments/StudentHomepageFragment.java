@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import com.example.pedapp.Activity.MainActivity;
 import com.example.pedapp.R;
@@ -27,6 +29,12 @@ public class StudentHomepageFragment extends Fragment {
         buttonResult = view.findViewById(R.id.ButtonResults);
         logout();
         results();
+
+        Spinner spinnerTest = view.findViewById(R.id.SpinnerStudent);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),R.array.testLists,R.layout.student_homepage_spinner);
+        adapter.setDropDownViewResource(R.layout.student_homepage_spinner);
+        spinnerTest.setAdapter(adapter);
+
         return view;
     }
 
