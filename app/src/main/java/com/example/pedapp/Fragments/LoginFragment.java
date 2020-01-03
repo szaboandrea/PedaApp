@@ -31,14 +31,24 @@ public class LoginFragment extends Fragment {
         return view;
     }
 
+//    public void login(){
+//        buttonLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new StudentHomepageFragment(),null).commit();
+//            }
+//        });
+//    }
+
     public void login(){
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new StudentHomepageFragment(),null).commit();
+                MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new TeacherHomepageFragment(),null).commit();
             }
         });
     }
+
     public void registration(){
         textViewRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
