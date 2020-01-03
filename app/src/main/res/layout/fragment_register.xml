@@ -24,7 +24,7 @@
         android:layout_height="56dp"
         android:text="@string/registration"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
@@ -39,7 +39,6 @@
         android:layout_marginBottom="10dp"
         android:autofillHints="name"
         android:backgroundTint="@color/white"
-        android:ems="10"
         android:gravity="center_vertical"
         android:hint="@string/nameRegister"
         android:inputType="textPersonName"
@@ -47,11 +46,14 @@
         android:textColorHighlight="@color/white"
         android:textColorHint="@color/white"
         android:textCursorDrawable="@color/white"
+        android:textSize="10sp"
         android:textStyle="normal|italic"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextEmailRegister"
@@ -61,7 +63,6 @@
         android:layout_marginBottom="10dp"
         android:autofillHints="email"
         android:backgroundTint="@color/white"
-        android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
         android:textColor="@color/white"
@@ -69,6 +70,7 @@
         android:textColorHint="@color/white"
         android:textCursorDrawable="@color/white"
         android:textStyle="normal|italic"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
@@ -82,7 +84,6 @@
         android:layout_marginBottom="10dp"
         android:autofillHints="password"
         android:backgroundTint="@color/white"
-        android:ems="10"
         android:hint="@string/password"
         android:inputType="textPersonName"
         android:textColor="@color/white"
@@ -91,6 +92,7 @@
         android:textColorLink="@color/white"
         android:textCursorDrawable="@color/white"
         android:textStyle="normal|italic"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
@@ -104,7 +106,6 @@
         android:layout_marginBottom="10dp"
         android:autofillHints="password"
         android:backgroundTint="@color/white"
-        android:ems="10"
         android:hint="@string/passwordAgain"
         android:inputType="textPersonName"
         android:textColor="@color/white"
@@ -113,6 +114,7 @@
         android:textColorLink="@color/white"
         android:textCursorDrawable="@color/white"
         android:textStyle="normal|italic"
+        android:textSize="10sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="@+id/guideline10"
@@ -151,18 +153,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/white"
-            android:ems="10"
             android:text="@string/teacher"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="10sp" />
 
         <RadioButton
             android:id="@+id/radioButtonStudent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:buttonTint="@color/white"
-            android:ems="10"
             android:text="@string/student"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
     </RadioGroup>
 
     <androidx.constraintlayout.widget.Guideline
@@ -219,7 +222,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.85" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
