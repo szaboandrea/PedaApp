@@ -22,11 +22,14 @@
         <item>Teszt 3</item>
         <item>Teszt 4</item>>
     </string-array>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nameRegister">Név</string>
     <string name="teacher">Tanár</string>
     <string name="student">Diák</string>
+    <string name="teacherTests">Tesztek</string>
+    <string name="teacherCreateTest">Teszt létrehozása</string>
+    <string name="teacherResult">Eredmények</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>
