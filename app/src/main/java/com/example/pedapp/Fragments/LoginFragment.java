@@ -33,6 +33,8 @@ public class LoginFragment extends Fragment {
         textViewRegistration = view.findViewById(R.id.TextViewRegistration);
         editTextEmail = view.findViewById(R.id.EditTextEmail);
         editTextPassword = view.findViewById(R.id.EditTextPassword);
+        SQLiteProfile db = new SQLiteProfile(getActivity());
+        db.getAllProfile();
         login();
         registration();
         return view;
