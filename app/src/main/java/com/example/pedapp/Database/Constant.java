@@ -5,7 +5,7 @@ public class Constant {
      * Basic setting, what's the database name,and how many table has => that is the version
      */
     public static final String DATABASE_NAME = "MovieDB";
-    public static final int DATABASE_VERSION = 3;
+    public static final int DATABASE_VERSION = 4;
 
     /**
      * Pofile table, which has 5 column

@@ -12,10 +12,14 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.example.pedapp.Activity.MainActivity;
+import com.example.pedapp.Database.SQLiteTest;
 import com.example.pedapp.R;
+
+import java.util.ArrayList;
 
 public class StudentHomepageFragment extends Fragment {
     private Button buttonLogOut, buttonResult;
+    private ArrayList<String> groupList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,12 +27,14 @@ public class StudentHomepageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_student_homepage, container, false);
         enableBackArrow(false);
+        SQLiteTest database = new SQLiteTest(getActivity());
+        groupList = database.getAllGroupName();
         buttonLogOut = view.findViewById(R.id.ButtonLogout);
         buttonResult = view.findViewById(R.id.ButtonResults);
         logout();
         results();
         Spinner spinnerTest = view.findViewById(R.id.SpinnerStudent);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),R.array.testLists,R.layout.student_homepage_spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), R.layout.student_homepage_spinner, groupList);
         adapter.setDropDownViewResource(R.layout.student_homepage_spinner);
         spinnerTest.setAdapter(adapter);
 
