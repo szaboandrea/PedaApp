@@ -20,7 +20,7 @@
         <item>Teszt 1</item>
         <item>Teszt 2</item>
         <item>Teszt 3</item>
-        <item>Teszt 4</item>>
+        <item>Teszt 4</item>
     </string-array>
     <string name="nameRegister">Név</string>
     <string name="teacher">Tanár</string>
@@ -28,6 +28,16 @@
     <string name="teacherTests">Tesztek</string>
     <string name="teacherCreateTest">Teszt létrehozása</string>
     <string name="teacherResult">Eredmények</string>
+    <string name="testCreate">Teszt létrehozás</string>
+    <string name="testCreateGroup">Csoportnév</string>
+    <string name="testCreateQuestion">Kérdés</string>
+    <string name="testCreateAnswers1">Válasz 1 </string>
+    <string name="testCreateAnswers2">Válasz 2 </string>
+    <string name="testCreateAnswers3">Válasz 3 </string>
+    <string name="testCreateAnswers4">Válasz 4 </string>
+    <string name="testCreateAnswersCorrect">Helyes válasz</string>
+    <string name="testCreateAddQuestion">Hozzáadás</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
