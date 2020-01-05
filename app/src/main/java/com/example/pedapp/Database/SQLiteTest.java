@@ -8,6 +8,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.example.pedapp.Classes.Test;
+
 import java.util.ArrayList;
 
 public class SQLiteTest {
@@ -77,6 +79,27 @@ public class SQLiteTest {
             res.moveToNext();
         }
         return groupNames;
+    }
+
+    public ArrayList<Test> getTestOneGroup(String groupname){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor res = db.query(Constant.TEST_TABLE_NAME,
+                new String[] {Constant.TEST_COLUMN_QUESTION , Constant.TEST_COLUMN_ANSWEAR1, Constant.TEST_COLUMN_ANSWEAR2, Constant.TEST_COLUMN_ANSWEAR3, Constant.TEST_COLUMN_ANSWEAR4, Constant.TEST_COLUMN_CORRECTANSWEAR},
+                "groupname=?", new String[] {groupname}, null,null,null);
+        res.moveToFirst();
+        ArrayList<Test> tests = new ArrayList<>();
+        while(res.isAfterLast() == false) {
+            String question =res.getString(res.getColumnIndex("question"));
+            String answear1 = res.getString(res.getColumnIndex("answear1"));
+            String answear2 = res.getString(res.getColumnIndex("answear2"));
+            String answear3 = res.getString(res.getColumnIndex("answear3"));
+            String answear4 = res.getString(res.getColumnIndex("answear4"));
+            String correctAnswear = res.getString(res.getColumnIndex("correctanswear"));
+            Test test = new Test(question, answear1,answear2,answear3,answear4, correctAnswear);
+            tests.add(test);
+            res.moveToNext();
+        }
+        return tests;
     }
 
 }
