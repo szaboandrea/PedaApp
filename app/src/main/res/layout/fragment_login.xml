@@ -61,7 +61,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline19" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/ButtonLogin"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/roundedbutton"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
     <TextView
-        android:id="@+id/textViewRegistration"
+        android:id="@+id/TextViewRegistration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
