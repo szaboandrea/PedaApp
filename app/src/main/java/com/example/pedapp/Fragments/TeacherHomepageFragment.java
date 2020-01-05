@@ -16,7 +16,7 @@ import com.example.pedapp.R;
 
 public class TeacherHomepageFragment extends Fragment {
 
-    private Button buttonLogOut, buttonCreateTest;
+    private Button buttonLogOut, buttonCreateTest, buttonTeacherResult;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,8 +25,10 @@ public class TeacherHomepageFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_teacher_homepage, container, false);
         enableBackArrow(false);
         buttonLogOut = view.findViewById(R.id.ButtonLogout);
+        buttonTeacherResult = view.findViewById(R.id.ButtonTeacherResult);
         buttonCreateTest = view.findViewById(R.id.ButtonTeacherTestCreate);
         logout();
+        results();
         createTest();
         return view;
     }
@@ -37,6 +39,17 @@ public class TeacherHomepageFragment extends Fragment {
             public void onClick(View v) {
                 MainActivity.mFragmentManager.beginTransaction()
                         .replace(R.id.fragmentContainer, new TestCreateFragment(),null)
+                        .commit();
+            }
+        });
+    }
+
+    public void results(){
+        buttonTeacherResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.mFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, new ResultFragment(),null)
                         .commit();
             }
         });

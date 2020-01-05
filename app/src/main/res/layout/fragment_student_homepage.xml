@@ -52,12 +52,12 @@
         app:layout_constraintVertical_bias="0.013" />
 
     <Button
-        android:id="@+id/ButtonResults"
+        android:id="@+id/ButtonTestFill"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/roundedbutton"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/results"
+        android:text="@string/testFill"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

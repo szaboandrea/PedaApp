@@ -30,9 +30,9 @@ public class StudentHomepageFragment extends Fragment {
         SQLiteTest database = new SQLiteTest(getActivity());
         groupList = database.getAllGroupName();
         buttonLogOut = view.findViewById(R.id.ButtonLogout);
-        buttonResult = view.findViewById(R.id.ButtonResults);
+//        buttonResult = view.findViewById(R.id.ButtonResults);
         logout();
-        results();
+//        results();
         Spinner spinnerTest = view.findViewById(R.id.SpinnerStudent);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), R.layout.student_homepage_spinner, groupList);
         adapter.setDropDownViewResource(R.layout.student_homepage_spinner);
@@ -41,16 +41,16 @@ public class StudentHomepageFragment extends Fragment {
         return view;
     }
 
-    public void results(){
-        buttonResult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MainActivity.mFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainer, new ResultFragment(),null)
-                        .commit();
-            }
-        });
-    }
+//    public void results(){
+//        buttonResult.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MainActivity.mFragmentManager.beginTransaction()
+//                        .replace(R.id.fragmentContainer, new ResultFragment(),null)
+//                        .commit();
+//            }
+//        });
+//    }
 
     /**
      * if you click the "kijelentkezes" button, you can log out
