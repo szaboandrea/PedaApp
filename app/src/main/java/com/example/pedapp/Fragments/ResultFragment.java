@@ -108,7 +108,7 @@ public class ResultFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 MainActivity.mFragmentManager.beginTransaction()
-                        .replace(R.id.fragmentContainer, new StudentHomepageFragment(),null)
+                        .replace(R.id.fragmentContainer, new TeacherHomepageFragment(),null)
                         .commit();
             }
         });

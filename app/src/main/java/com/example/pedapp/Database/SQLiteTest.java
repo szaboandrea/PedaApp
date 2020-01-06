@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.example.pedapp.Classes.Test;
 
+import java.sql.Struct;
 import java.util.ArrayList;
 
 public class SQLiteTest {

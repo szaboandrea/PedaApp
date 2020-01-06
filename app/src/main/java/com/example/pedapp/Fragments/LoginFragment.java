@@ -62,8 +62,16 @@ public class LoginFragment extends Fragment {
     public void entry(String mEmail, String mPassword){
         SQLiteProfile database = new SQLiteProfile(getActivity());
         if (mPassword.matches(database.getPassword(mEmail))){
-            database.getAllProfile();
-            MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new StudentHomepageFragment(),null).commit();
+            if (database.getStatus(mEmail).matches("0")){
+                MainActivity.mFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, new StudentHomepageFragment(),null)
+                        .commit();
+            }
+            else {
+                MainActivity.mFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, new TeacherHomepageFragment(),null)
+                        .commit();
+            }
         }
         else{
             Toast.makeText(getActivity(), "Password or email wrong", Toast.LENGTH_LONG).show();

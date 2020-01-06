@@ -143,4 +143,18 @@ public class SQLiteProfile {
             res.moveToNext();
         }
     }
+
+    public String getStatus(String email){
+        database = dbHelper.getReadableDatabase();
+        Cursor cursor = database.query(Constant.PROFILE_TABLE_NAME, new String[] {Constant.PROFILE_COLUMN_STATUS},
+                "email=?", new String[] {email},
+                null,null,null);
+        String result = "";
+        cursor.moveToFirst();
+        while(cursor.isAfterLast() == false) {
+            result = cursor.getString(cursor.getColumnIndex("status"));
+            cursor.moveToNext();
+        }
+        return result;
+    }
 }
