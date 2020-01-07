@@ -40,7 +40,7 @@ public class ResultFragment extends Fragment {
         student.setId(0);
         student.setTextColor(Color.WHITE);
         student.setTextSize(20);
-        student.setPadding(10,10,10,10);
+        student.setPadding(10,10,50,50);
         row.addView(student);
 
         TextView note = new TextView(getActivity());
@@ -48,7 +48,7 @@ public class ResultFragment extends Fragment {
         note.setId(0);
         note.setTextColor(Color.WHITE);
         note.setTextSize(20);
-        note.setPadding(10,10,10,10);
+        note.setPadding(10,10,50,50);
         row.addView(note);
 
         TextView test = new TextView(getActivity());
@@ -56,7 +56,7 @@ public class ResultFragment extends Fragment {
         test.setId(0);
         test.setTextColor(Color.WHITE);
         test.setTextSize(20);
-        test.setPadding(10,10,10,10);
+        test.setPadding(10,10,50,50);
         row.addView(test);
 
         myTable.addView(row);
@@ -67,11 +67,11 @@ public class ResultFragment extends Fragment {
             row.setId(i);
             row.setLayoutParams(new TableLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             TextView tx1 = new TextView(getActivity());
-            tx1.setText("Katika");
+            tx1.setText("Nagy Katika");
             tx1.setId(i);
             tx1.setTextColor(Color.WHITE);
             tx1.setTextSize(20);
-            tx1.setPadding(10,10,10,10);
+            tx1.setPadding(10,10,50,50);
             row1.addView(tx1);
 
             TextView tx2 = new TextView(getActivity());
@@ -79,7 +79,7 @@ public class ResultFragment extends Fragment {
             tx2.setId(i);
             tx2.setTextColor(Color.WHITE);
             tx2.setTextSize(20);
-            tx2.setPadding(10,10,10,10);
+            tx2.setPadding(10,10,50,50);
             row1.addView(tx2);
 
             TextView tx3 = new TextView(getActivity());
@@ -87,7 +87,7 @@ public class ResultFragment extends Fragment {
             tx3.setId(i);
             tx3.setTextColor(Color.WHITE);
             tx3.setTextSize(20);
-            tx3.setPadding(10,10,10,10);
+            tx3.setPadding(10,10,50,50);
             row1.addView(tx3);
 
             myTable.addView(row1);
