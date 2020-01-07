@@ -69,7 +69,7 @@ public class RegisterFragment extends Fragment {
             edt.commit();
             SQLiteProfile database  = new SQLiteProfile(getActivity());
             database.insertProfile(mUsername, mEmail,mStatus,mPassword1);
-            MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new StudentHomepageFragment(),null).commit();
+            MainActivity.mFragmentManager.beginTransaction().replace(R.id.fragmentContainer, new LoginFragment(),null).commit();
         }
     }
 

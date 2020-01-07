@@ -20,7 +20,10 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.example.pedapp.Activity.MainActivity;
+import com.example.pedapp.Database.SQLiteProfile;
 import com.example.pedapp.R;
+
+import java.util.ArrayList;
 
 
 public class ResultFragment extends Fragment {
@@ -32,6 +35,9 @@ public class ResultFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_result, container, false);
         TableLayout myTable = view.findViewById(R.id.tableLayoutResult);
 
+        SQLiteProfile database = new SQLiteProfile(getActivity());
+        ArrayList<String> profiles = new ArrayList<>();
+        profiles = database.getAllProfile();
         TableRow row = new TableRow(getActivity());
         row.setId(0);
         row.setLayoutParams(new TableLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
@@ -61,13 +67,13 @@ public class ResultFragment extends Fragment {
 
         myTable.addView(row);
 
-        for (int i = 1; i<30;++i)
+        for (int i = 1; i<profiles.size();++i)
         {
             TableRow row1 = new TableRow(getActivity());
             row.setId(i);
             row.setLayoutParams(new TableLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             TextView tx1 = new TextView(getActivity());
-            tx1.setText("Nagy Katika");
+            tx1.setText(profiles.get(i));
             tx1.setId(i);
             tx1.setTextColor(Color.WHITE);
             tx1.setTextSize(20);

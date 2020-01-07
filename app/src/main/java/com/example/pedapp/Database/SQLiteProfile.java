@@ -131,17 +131,17 @@ public class SQLiteProfile {
     }
 
     @SuppressLint("LongLogTag")
-    public void getAllProfile(){
+    public ArrayList<String> getAllProfile(){
         SQLiteDatabase db = dbHelper.getReadableDatabase();
+        ArrayList<String> profiles = new ArrayList<>();
         Cursor res = db.rawQuery( "select * from "+ Constant.PROFILE_TABLE_NAME,
                 null );
         res.moveToFirst();
         while(res.isAfterLast() == false) {
-            Log.d(TAG, res.getString(res.getColumnIndex("username")));
-            Log.d(TAG, res.getString(res.getColumnIndex("email")));
-            Log.d(TAG, res.getString(res.getColumnIndex("status")));
+            profiles.add(res.getString(res.getColumnIndex("username")));
             res.moveToNext();
         }
+        return profiles;
     }
 
     public String getStatus(String email){
